@@ -1,0 +1,153 @@
+{% load static %}
+<!--fit flex--><!DOCTYPE HTML>
+<html>
+<head>
+<title>Fit Flex</title>
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Zero Size Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+<link href='static//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='static//fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+<!--google fonts-->
+<!-- animated-css -->
+		<link href="static/css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="static/js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+<!-- animated-css -->
+ <script src="static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--header start here-->
+<!-- NAVBAR
+==================================================-->
+<div class="header">
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="logo wow slideInLeft" data-wow-delay="0.3s">
+                    <a class="navbar-brand" href="index.html"><img src="static/images/banner.jpg" /></a>
+              </div>
+            </div>
+           <div id="navbar" class="navbar-collapse collapse">
+              <nav class="cl-effect-11">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html" data-hover="Home">Home</a></li>
+                <li><a href="services.html" data-hover="Services">Services</a></li>
+                <li><a href="portfolio.html" data-hover="Diet Track">Diet Track</a></li>
+                <li><a href="contact.html" data-hover="Contact">Contact</a></li>
+              </ul>
+            </nav>
+            </div>
+            <div class="clearfix"> </div>
+             </nav>
+          </div>
+           <div class="clearfix"> </div>
+    </div>
+     <div class="clearfix"> </div>
+</div>
+<!--header end here-->
+<!--contact start here-->
+
+<div class="contact">
+	<div class="contact-main">
+	   <div class="container">
+			<div class="contact-top" data-wow-delay="0.3s">
+				<h1>Contact</h1>
+				<p>"Have questions or ready to start your fitness journey? Contact us today and let FitFlex guide you to your goals!</p>			</div>
+			<div class="contact-bottom">
+          			  <form method="post" action="{% url 'contact' %}">
+                 {% csrf_token %}
+				<div class="col-md-7 contact-left" data-wow-delay="0.3s">
+					<p>Name</p>
+		             <input type="text" value="" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required/>
+					 
+		            <p>E-mail</p> 
+		             <input type="text" value="" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required />
+		            
+		            <p>Phone</p>
+		             <input type="text" value="" name="usernumberr" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required />
+				
+			  {% for message in messages %}
+			  	 <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+			  <h5>{{message}}</h5>
+			  </div>
+			  {% endfor %}
+			
+					 <p>Membership Duration</p>
+                    <select>
+                        <option value="1 month">1 Month</option>
+                        <option value="3 months">3 Months</option>
+                        <option value="6 months">6 Months</option>
+                        <option value="1 year">1 Year</option>
+                    </select>
+                    <br><br>
+					  <button type="submit" class="cta-button">Join Now</button>
+				</div>
+				<style>
+					.cta-button {
+						background-color:lightblue;
+						color: black;
+						padding: 15px 30px;
+						font-size: 12px;
+						border: none;
+						border-radius: 5px;
+						cursor: pointer;
+						text-align: center;
+						text-decoration: none;
+						display: inline-block;
+						
+					}
+				</style>
+			  </form>
+			  
+		</div>
+	</div>
+</div>
+
+
+<!--footer start here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-main">
+			  <div class="col-md-4 ftr-grd" data-wow-delay="0.3s">
+				<h3>Get in Touch</h3>
+				<p>Mohali road</p>
+				<p>floor 2nd in mini market</p>
+				<p>Phone: 1234567891</p>
+			  </div>
+			 
+			  <div class="col-md-4 ftr-grd" data-wow-delay="0.3s">
+			  	 <h3>Join Our Newsletter</h3>
+			  	   <form>
+			  	 	<input type="text" value="Email"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
+			  	 	<input type="submit" value="Subscribe">
+			  	   </form>
+			  </div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="copy-right" data-wow-delay="0.3s">
+	  <p>All rights reserved | Design by Navinoor khattra</p>
+</div>
+<!--footer end here-->
+</body>
+</html>
